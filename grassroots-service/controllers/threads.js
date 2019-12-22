@@ -23,7 +23,7 @@ module.exports = {
     addCommentToThread: (timeNow, currentUserId, commentBody, reference, threadId, res, dbRequest) => {
         dbRequest(queries.addCommentToThread,
             [currentUserId, threadId, commentBody, reference, timeNow, timeNow, timeNow], res);
-        updateParent(threadId);
+        updateParent(timeNow, threadId);
     },
     upvoteThread: (timeNow, currentUserId, threadId, res, dbRequest) => {
         dbRequest(queries.upvoteThread, 
@@ -34,11 +34,10 @@ module.exports = {
     },
 }
 
-function updateParent(threadId){
-    timeNow = getDateTimeNow();
+function updateParent(timeNow, threadId){
     pool.query(
     queries.updateParent, 
-    [time_now, threadId],
+    [timeNow, threadId],
     (err, result) => {
         return;
     });

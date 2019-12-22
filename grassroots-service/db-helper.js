@@ -58,7 +58,7 @@ module.exports = {
         topicController.getTopicParents(res, dbRequest);
     },
     getTopicsForParent: (parent, res) => {
-        topicController.getTopicsforParent(parent, res, dbRequest);
+        topicController.getTopicsForParent(parent, res, dbRequest);
     },
     getHotThreads: (coordLocation, currentUserId, res) => {
         const trimmedCoord = trim(coordLocation);

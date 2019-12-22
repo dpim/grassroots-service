@@ -20,7 +20,7 @@ module.exports = {
     getTopicParents: (res, dbRequest) => {
         dbRequest(queries.getTopicParents, [], res);
     },
-    getTopicsforParent: (parent, res, dbRequest) => {
+    getTopicsForParent: (parent, res, dbRequest) => {
         dbRequest(queries.getTopicsForParent, [parent], res);
     },
     insertThreadIntoTopic: (timeNow, currentUserId, threadTitle, threadBody, topicId, res, dbRequest) => {
