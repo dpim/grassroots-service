@@ -1,4 +1,4 @@
-# Grassroots service
+# Grassroots - service
 ![logo](./media/logo.jpeg)
 
 ## About
